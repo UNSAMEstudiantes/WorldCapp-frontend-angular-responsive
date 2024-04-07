@@ -1,0 +1,30 @@
+.card__layout {
+  display: grid;
+  width: 100%;
+  padding: 1rem 2rem;
+  gap: 1rem;
+}
+
+.card {
+  max-width: 25rem;
+  border-radius: var(--card-border);
+  background-color: var(--card-background-color);
+  border: 0.1px solid black;
+  transition: var(--default-transition);
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+@media screen and (min-width: 401px) {
+  .card__layout {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .card__layout {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

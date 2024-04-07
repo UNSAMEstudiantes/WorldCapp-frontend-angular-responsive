@@ -1,0 +1,31 @@
+<article class="card">
+  <header class="punto-de-venta__title">
+    <h3 data-testId="puntoNombre">{{ puntodeventa.tipo }}  {{ puntodeventa.nombre }}</h3>
+    <div class="local__icon">
+      <i *ngIf="puntodeventa.tipo === 'Supermercado'" class="fa-solid fa-basket-shopping"></i>
+      <i *ngIf="puntodeventa.tipo === 'Kiosko'" class="fa-solid fa-shop"></i>
+      <i *ngIf="puntodeventa.tipo === 'Libreria'" class="fa-solid fa-book"></i>
+    </div>
+  </header>  
+  <section class="punto-de-venta__body">
+    <div class="info">
+      <h2>Dirección:</h2>
+      <p>{{puntodeventa.direccion}}</p>
+    </div>
+    <div class="info">
+      <h2>Geografia:</h2>
+      <p>{{puntodeventa.puntoX | number : '1.5-5'}},</p>
+      <p>{{puntodeventa.puntoY | number : '1.5-5'}} </p>
+    </div>
+    <div class="info">
+      <h2>Distancia:</h2>
+      <p> {{puntodeventa.distancia | number : '1.2-2' }} Kilometros</p>
+    </div>
+  </section>
+  <section class="punto-de-venta__stock">
+    <h2>Stock de Sobres:</h2> {{puntodeventa.stockSobres}} unidades <h2>Pedidos Pendientes</h2>
+  </section>
+  <footer class="punto-de-venta__price">
+    Precio por sobre ${{puntodeventa.precioPorSobre | number : '1.2-2' }}
+  </footer>
+</article>

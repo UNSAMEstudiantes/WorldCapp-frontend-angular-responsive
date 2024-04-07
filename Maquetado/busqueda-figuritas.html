@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="stylesheet" href="./styles/busqueda-figuritas.css" />
+  <link rel="stylesheet" href="./styles/cards-layout.css" />
+  <link rel="stylesheet" href="./styles/layout.css" />
+  <link rel="stylesheet" href="./styles/figurita.css">
+  <title>Busqueda Figuritas</title>
+</head>
+
+<body>
+  <div class="layout__container">
+    <header>
+      <div class="header__icon">
+        <h1 class="header__icon">WorldCApp</h1>
+      </div>
+      <div class="header__item__container">
+        <ul>
+          <li class="header__item header__menu">Figuritas</li>
+          <li class="header__item header__menu">Perfil</li>
+          <li class="header__item header__menu">Sobres</li>
+          <li class="header__item header__menu">
+            <i class="fa-solid fa-right-from-bracket"></i>
+          </li>
+          <li class="header__item header__hamburger">
+            <i class="fa-solid fa-bars"></i>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <nav>
+      <search class="nav__search-container">
+        <div class="nav__search">
+          <input placeholder="Buscar" class="form__input search-bar" type="text" />
+          <div class="form__input search-icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>
+      </search>
+    </nav>
+    <aside>
+      <div class="filter__container">
+        <div class="filter__titulo__container">
+          <h2 class="filter__titulo">Filtros</h2>
+          <hr />
+        </div>
+        <div class="filter">
+          <div class="filter__input__container">
+            <h2 class="filter__subtitulo">Valoracion</h2>
+            <div class="filter__inputs">
+              <div class="input-group filter__input-group">
+                <label class="filter__label" for="desde">Desde</label>
+                <input placeholder="placeholder" class="filter__input" type="text" id="desde" />
+              </div>
+              <div class="input-group filter__input-group">
+                <label class="filter__label" for="hasta">Hasta</label>
+                <input placeholder="placeholder" class="filter__input" type="text" id="hasta" />
+              </div>
+            </div>
+          </div>
+          <div class="filter__checkbox__container">
+            <div class="filter__checkbox">
+              <input type="checkbox" id="on_fire" />
+              <label for="on_fire">On fire</label>
+            </div>
+            <div class="filter__checkbox">
+              <input type="checkbox" id="promesa" />
+              <label for="promesa">Es promesa</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <main>
+      <div class="card__layout">
+        <article class="card figurita">
+          <section class="figurita__imagen">
+            <img src="images/messi.jpg" alt="" />
+          </section>
+          <section class="figurita__info-principal">
+            <div class="figurita__info-principal figurita__info__container">
+              <h2>Lionel Messi</h2>
+              <div class="">
+                <i class="fa-solid fa-id-badge"></i>
+                <h2>5</h2>
+              </div>
+              <div class="">
+                <i class="fa-solid fa-fire-flame-curved on-fire"></i>
+                <i class="fa-solid fa-star"></i>
+                <h2>128</h2>
+              </div>
+            </div>
+            <div class="figurita__info-principal figurita__info__container">
+              <div class="">
+                <i class="fa-solid fa-weight-scale"></i>
+                <p>Peso <span>72</span> kilos</p>
+              </div>
+              <div class="">
+                <i class="fa-solid fa-person"></i>
+                <h2>Altura</h2>
+                <span>1.7</span>
+              </div>
+            </div>
+          </section>
+          <hr />
+          <section class="figurita__info-secundaria">
+            <div class="figurita__info-secundaria figurita__info__container">
+              <div class="">
+                <h2>Casaca</h2>
+                <span>10</span>
+              </div>
+              <div class="">
+                <h2>Seleccion</h2>
+                <span>Argentina</span>
+              </div>
+            </div>
+            <div class="figurita__info-secundaria figurita__info__container">
+              <div>
+                <h2>Nacimiento</h2>
+                <span>24/06/1987 (36 años)</span>
+              </div>
+              <div>
+                <h2>Posicion</h2>
+                <span>Delantero</span>
+              </div>
+            </div>
+          </section>
+          <section class="figurita__cotizacion">
+            <h2>Cotizacion <span class="cotizacion">80.000.000</span></h2>
+          </section>
+        </article>
+        <article class="card figurita">
+          <section class="figurita__imagen">
+            <img src="images/messi.jpg" alt="" />
+          </section>
+          <section class="figurita__info-principal">
+            <div class="figurita__info-principal figurita__info__container">
+              <h2>Lionel Messi</h2>
+              <div class="">
+                <i class="fa-solid fa-id-badge"></i>
+                <h2>5</h2>
+              </div>
+              <div class="">
+                <i class="fa-solid fa-fire-flame-curved on-fire"></i>
+                <i class="fa-solid fa-star"></i>
+                <h2>128</h2>
+              </div>
+            </div>
+            <div class="figurita__info-principal figurita__info__container">
+              <div class="">
+                <i class="fa-solid fa-weight-scale"></i>
+                <p>Peso <span>72</span> kilos</p>
+              </div>
+              <div class="">
+                <i class="fa-solid fa-person"></i>
+                <h2>Altura</h2>
+                <span>1.7</span>
+              </div>
+            </div>
+          </section>
+          <hr />
+          <section class="figurita__info-secundaria">
+            <div class="figurita__info-secundaria figurita__info__container">
+              <div class="">
+                <h2>Casaca</h2>
+                <span>10</span>
+              </div>
+              <div class="">
+                <h2>Seleccion</h2>
+                <span>Argentina</span>
+              </div>
+            </div>
+            <div class="figurita__info-secundaria figurita__info__container">
+              <div>
+                <h2>Nacimiento</h2>
+                <span>24/06/1987 (36 años)</span>
+              </div>
+              <div>
+                <h2>Posicion</h2>
+                <span>Delantero</span>
+              </div>
+            </div>
+          </section>
+          <section class="figurita__cotizacion">
+            <h2>Cotizacion <span class="cotizacion">80.000.000</span></h2>
+          </section>
+        </article>
+        <article class="card figurita">
+          <section class="figurita__imagen">
+            <img src="images/messi.jpg" alt="" />
+          </section>
+          <section class="figurita__info-principal">
+            <div class="figurita__info-principal figurita__info__container">
+              <h2>Lionel Messi</h2>
+              <div class="">
+                <i class="fa-solid fa-id-badge"></i>
+                <h2>5</h2>
+              </div>
+              <div class="">
+                <i class="fa-solid fa-fire-flame-curved on-fire"></i>
+                <i class="fa-solid fa-star"></i>
+                <h2>128</h2>
+              </div>
+            </div>
+            <div class="figurita__info-principal figurita__info__container">
+              <div class="">
+                <i class="fa-solid fa-weight-scale"></i>
+                <p>Peso <span>72</span> kilos</p>
+              </div>
+              <div class="">
+                <i class="fa-solid fa-person"></i>
+                <h2>Altura</h2>
+                <span>1.7</span>
+              </div>
+            </div>
+          </section>
+          <hr />
+          <section class="figurita__info-secundaria">
+            <div class="figurita__info-secundaria figurita__info__container">
+              <div class="">
+                <h2>Casaca</h2>
+                <span>10</span>
+              </div>
+              <div class="">
+                <h2>Seleccion</h2>
+                <span>Argentina</span>
+              </div>
+            </div>
+            <div class="figurita__info-secundaria figurita__info__container">
+              <div>
+                <h2>Nacimiento</h2>
+                <span>24/06/1987 (36 años)</span>
+              </div>
+              <div>
+                <h2>Posicion</h2>
+                <span>Delantero</span>
+              </div>
+            </div>
+          </section>
+          <section class="figurita__cotizacion">
+            <h2>Cotizacion <span class="cotizacion">80.000.000</span></h2>
+          </section>
+        </article>
+        <article class="card figurita">
+          <section class="figurita__imagen">
+            <img src="images/messi.jpg" alt="" />
+          </section>
+          <section class="figurita__info-principal">
+            <div class="figurita__info-principal figurita__info__container">
+              <h2>Lionel Messi</h2>
+              <div class="">
+                <i class="fa-solid fa-id-badge"></i>
+                <h2>5</h2>
+              </div>
+              <div class="">
+                <i class="fa-solid fa-fire-flame-curved on-fire"></i>
+                <i class="fa-solid fa-star"></i>
+                <h2>128</h2>
+              </div>
+            </div>
+            <div class="figurita__info-principal figurita__info__container">
+              <div class="">
+                <i class="fa-solid fa-weight-scale"></i>
+                <p>Peso <span>72</span> kilos</p>
+              </div>
+              <div class="">
+                <i class="fa-solid fa-person"></i>
+                <h2>Altura</h2>
+                <span>1.7</span>
+              </div>
+            </div>
+          </section>
+          <hr />
+          <section class="figurita__info-secundaria">
+            <div class="figurita__info-secundaria figurita__info__container">
+              <div class="">
+                <h2>Casaca</h2>
+                <span>10</span>
+              </div>
+              <div class="">
+                <h2>Seleccion</h2>
+                <span>Argentina</span>
+              </div>
+            </div>
+            <div class="figurita__info-secundaria figurita__info__container">
+              <div>
+                <h2>Nacimiento</h2>
+                <span>24/06/1987 (36 años)</span>
+              </div>
+              <div>
+                <h2>Posicion</h2>
+                <span>Delantero</span>
+              </div>
+            </div>
+          </section>
+          <section class="figurita__cotizacion">
+            <h2>Cotizacion <span class="cotizacion">80.000.000</span></h2>
+          </section>
+        </article>
+        <article class="card figurita">
+          <section class="figurita__imagen">
+            <img src="images/messi.jpg" alt="" />
+          </section>
+          <section class="figurita__info-principal">
+            <div class="figurita__info-principal figurita__info__container">
+              <h2>Lionel Messi</h2>
+              <div class="">
+                <i class="fa-solid fa-id-badge"></i>
+                <h2>5</h2>
+              </div>
+              <div class="">
+                <i class="fa-solid fa-fire-flame-curved on-fire"></i>
+                <i class="fa-solid fa-star"></i>
+                <h2>128</h2>
+              </div>
+            </div>
+            <div class="figurita__info-principal figurita__info__container">
+              <div class="">
+                <i class="fa-solid fa-weight-scale"></i>
+                <p>Peso <span>72</span> kilos</p>
+              </div>
+              <div class="">
+                <i class="fa-solid fa-person"></i>
+                <h2>Altura</h2>
+                <span>1.7</span>
+              </div>
+            </div>
+          </section>
+          <hr />
+          <section class="figurita__info-secundaria">
+            <div class="figurita__info-secundaria figurita__info__container">
+              <div class="">
+                <h2>Casaca</h2>
+                <span>10</span>
+              </div>
+              <div class="">
+                <h2>Seleccion</h2>
+                <span>Argentina</span>
+              </div>
+            </div>
+            <div class="figurita__info-secundaria figurita__info__container">
+              <div>
+                <h2>Nacimiento</h2>
+                <span>24/06/1987 (36 años)</span>
+              </div>
+              <div>
+                <h2>Posicion</h2>
+                <span>Delantero</span>
+              </div>
+            </div>
+          </section>
+          <section class="figurita__cotizacion">
+            <h2>Cotizacion <span class="cotizacion">80.000.000</span></h2>
+          </section>
+        </article>
+        <article class="card figurita">
+          <section class="figurita__imagen">
+            <img src="images/messi.jpg" alt="" />
+          </section>
+          <section class="figurita__info-principal">
+            <div class="figurita__info-principal figurita__info__container">
+              <h2>Lionel Messi</h2>
+              <div class="">
+                <i class="fa-solid fa-id-badge"></i>
+                <h2>5</h2>
+              </div>
+              <div class="">
+                <i class="fa-solid fa-fire-flame-curved on-fire"></i>
+                <i class="fa-solid fa-star"></i>
+                <h2>128</h2>
+              </div>
+            </div>
+            <div class="figurita__info-principal figurita__info__container">
+              <div class="">
+                <i class="fa-solid fa-weight-scale"></i>
+                <p>Peso <span>72</span> kilos</p>
+              </div>
+              <div class="">
+                <i class="fa-solid fa-person"></i>
+                <h2>Altura</h2>
+                <span>1.7</span>
+              </div>
+            </div>
+          </section>
+          <hr />
+          <section class="figurita__info-secundaria">
+            <div class="figurita__info-secundaria figurita__info__container">
+              <div class="">
+                <h2>Casaca</h2>
+                <span>10</span>
+              </div>
+              <div class="">
+                <h2>Seleccion</h2>
+                <span>Argentina</span>
+              </div>
+            </div>
+            <div class="figurita__info-secundaria figurita__info__container">
+              <div>
+                <h2>Nacimiento</h2>
+                <span>24/06/1987 (36 años)</span>
+              </div>
+              <div>
+                <h2>Posicion</h2>
+                <span>Delantero</span>
+              </div>
+            </div>
+          </section>
+          <section class="figurita__cotizacion">
+            <h2>Cotizacion <span class="cotizacion">80.000.000</span></h2>
+          </section>
+        </article>
+      </div>
+    </main>
+    <footer>
+      <p><i class="fa-brands fa-square-facebook"></i> <span>WorldCApp</span>/2023</p>
+    </footer>
+  </div>
+
+  <script src="https://kit.fontawesome.com/f7cfe71b2b.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

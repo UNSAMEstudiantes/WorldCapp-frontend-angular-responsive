@@ -1,0 +1,91 @@
+.checkbox__circle {
+  box-shadow: none;
+  margin-right: 0.3rem;
+}
+
+
+.filter__text {
+  display: flex;
+  flex-direction: column;
+  line-height: 2rem;
+}
+
+.filter__text--title {
+  border-bottom: 0.1rem solid var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.filter__text--title h3,
+.punto-de-venta__title h3,
+.punto-de-venta__price {
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.local__icon {
+  display: flex;
+  place-items: center;
+}
+
+.punto-de-venta__title,
+.punto-de-venta__price,
+.punto-de-venta__body,
+.punto-de-venta__stock {
+  padding: 0.5rem;
+}
+
+.punto-de-venta__title {
+  display: flex;
+  border-top-left-radius: var(--card-border);
+  border-top-right-radius: var(--card-border);
+  background-color: var(--tertiary-color);
+  justify-content: space-between;
+  padding: 0.5rem 0.7rem;
+}
+
+.punto-de-venta__body,
+.punto-de-venta__stock {
+  line-height: 3rem;
+}
+
+.info,
+.punto-de-venta__stock {
+  display: flex;
+}
+
+p {
+  margin-left: 0.5rem;
+}
+
+.punto-de-venta__stock {
+  justify-content: space-between;
+  border-top: 0.1rem solid var(--secondary-color);
+  border-bottom: 0.1rem solid var(--secondary-color);
+}
+
+@media screen and (max-width: 400px) {
+  .punto-de-venta__stock {
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 401px) and (max-width:768px) {
+
+
+  .filter__text {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .punto-de-venta__stock {
+    flex-direction: column;
+  }
+
+}
+
+@media screen and (min-width: 769px) {
+  .filter__section {
+    margin: 1rem;
+  }
+}

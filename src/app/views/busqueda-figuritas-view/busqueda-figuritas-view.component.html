@@ -1,0 +1,13 @@
+<div class="content__layout">
+    <nav>
+        <app-nav (stringToSearch)="filtrarPorNombre($event)"></app-nav>
+    </nav>
+    <aside>
+        <app-filter [figuritasFilter]="true" (filtersFigurita)="filtrarFiguritas($event)"></app-filter>
+    </aside>
+    <main>
+        <app-cards-container (manejoFigurita)="recibirFigurita($event)" [cards]="listaFiguritas" [isMain]="comingFromMain" [cardType]="tipoCard"></app-cards-container>
+    </main>
+</div>
+<app-Error-PopUp data-testId="error_login" [errorMessage]="errorMessage" [closePopup]="closePopup()" ></app-Error-PopUp>
+<app-pop-up [resultadoOperacion]="resultadoOperacion" [message]="messageNotificacion"></app-pop-up>

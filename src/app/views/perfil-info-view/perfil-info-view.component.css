@@ -1,0 +1,34 @@
+.perfil__form__container {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.perfil__form--group {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 1rem;
+}
+
+.form__input {
+    margin-top: 0.1rem;
+}
+
+.perfil__form--subtitulo {
+    flex-basis: 100%;
+    font-size: 1.5rem;
+}
+
+.form__buttons__container {
+    align-self: center;
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 0.6rem
+}
+
+.form__input-group {
+    flex-grow: 1;
+    flex-basis: 35%;
+    margin: 0.5rem;
+}

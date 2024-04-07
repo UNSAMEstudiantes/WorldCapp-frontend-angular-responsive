@@ -1,0 +1,32 @@
+<div *ngIf="figuritasFilter" class="filter__container">
+    <div class="filter__titulo__container">
+      <h2 class="filter__titulo">Filtros</h2>
+      <hr/>
+    </div>
+    <div class="filter">
+      <div class="filter__input__container">
+        <h2 class="filter__subtitulo">Valoracion</h2>
+        <div class="filter__inputs">
+          <div class="input-group filter__input-group">
+            <label class="filter__label" for="desde">Desde</label>
+            <input placeholder="placeholder" class="filter__input" type="number" id="desde" (focusout) = "enviarFiltros()" (focus) = "removerBorde()" [(ngModel)] = "desdeValor" [ngClass] = "esValido"/>
+          </div>
+          <div class="input-group filter__input-group">
+            <label class="filter__label" for="hasta">Hasta</label>
+            <input placeholder="placeholder" class="filter__input" type="number" id="hasta" (focusout) = "enviarFiltros()" [(ngModel)] = "hastaValor"/>
+          </div>
+          <app-ERROR *ngIf="error" [errorText]="error"></app-ERROR>
+        </div>
+      </div>
+      <div class="filter__checkbox__container">
+        <div class="filter__checkbox">
+          <input type="checkbox" id="on_fire" [(ngModel)]="onFire" (change)="enviarFiltros()"/>
+          <label for="on_fire">On fire</label>
+        </div>
+        <div class="filter__checkbox">
+          <input type="checkbox" id="promesa" [(ngModel)]="esPromesa" (change)="enviarFiltros()"/>
+          <label for="promesa">Es promesa</label>
+        </div>
+      </div>
+    </div>
+</div>

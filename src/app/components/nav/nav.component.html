@@ -1,0 +1,8 @@
+<div class="nav nav__search-container">
+    <div class="nav__search">
+        <input  [(ngModel)] = "nombreABuscar" placeholder="Buscar" class="form__input search-bar" type="text" (keydown.enter)="realizarBusqueda()" data-testId="inputNombre"/>
+        <div class="form__input search-icon" (click) = "realizarBusqueda()" data-testId="buscar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+    </div>
+</div>

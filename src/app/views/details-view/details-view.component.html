@@ -1,0 +1,107 @@
+<main>
+  <article class="details__container">
+    <section class="details__title">
+      <div class="title__main">
+        <div class="title__name">
+          <h1 data-testId="figuritaNombre"> {{figurita.nombre}} </h1>
+        </div>
+        <div class="title__propietario">
+          <span> ({{figurita.cedidaPor?.nombre}} {{figurita.cedidaPor?.apellido}})</span>
+        </div>
+      </div>
+      <div class="iconos">
+        <i class="fa-solid fa-fire-flame-curved on-fire" *ngIf="figurita.onFire"></i>
+        <i class="fa-solid fa-address-book"></i>
+        <div>
+          <h4 data-testId="figuritaNumero">{{figurita.numeroFigurita}} </h4>
+        </div>
+      </div>
+    </section>
+    <div class="details__info-central">
+      <section class="info-central__imagen">
+        <img src="../assets/{{figurita.imagen}}" alt="" />
+      </section>
+
+      <section class="info-central__info-personaje">
+        <div class="details__info-container">
+          <div class="">
+            <i class="fa-solid fa-weight-scale"></i>
+            <h2>Peso</h2>
+            <span class="valor" data-testId="figuritaPeso">{{figurita.peso}}</span>
+          </div>
+          <div class="">
+            <i class="fa-solid fa-person"></i>
+            <h2>Altura</h2>
+            <span class="valor" data-testId="figuritaAltura">{{figurita.altura}}</span>
+          </div>
+        </div>
+        <div class="details__info-container">
+          <div class="details__nacimiento">
+            <h2>Nacimiento</h2>
+            <span data-testId="figuritaNacimientoEdad">{{figurita.nacimiento | date: 'shortDate'}} ({{figurita.edadJugador()}} años)</span>
+          </div>
+        </div>
+        <div class="details__info-container">
+          <div class="">
+            <h2>Casaca</h2>
+            <span class="valor" data-testId="figuritaNroCamiseta">{{figurita.nroCamiseta}}</span>
+          </div>
+          <div class="">
+            <h2>Selección</h2>
+            <span class="valor" data-testId="figuritaSeleccion">{{figurita.seleccion}} (<i class="fas fa-trophy"></i> {{figurita.copasDelMundo}})</span>
+          </div>
+        </div>
+        <div class="details__info-container">
+          <div class="">
+            <h2>Año debut</h2>
+            <span class="valor" data-testId="figuritaAnioDeDebut">{{figurita.anioDeDebut | date: 'yyyy'}}</span>
+          </div>
+          <div class="">
+            <h2></h2>
+            <span class="valor" data-testId="figuritaConfederacion">{{figurita.confederacion}} (<i class="fas fa-trophy"></i> {{ figurita.copasConfederacion}})</span>
+          </div>
+        </div>
+        <div class="details__info-container">
+          <div class=" ">
+            <h2>Posición</h2>
+            <span class="valor" data-testId="figuritaPosicion">{{figurita.posicion}}</span>
+          </div>
+          <div class=" ">
+            <span class="valor" *ngIf="figurita.lider"><h2>Es líder</h2></span>
+          </div>
+        </div>
+        <div class="details__cotizacion">
+          <h2 data-testId="figuritaCotizacion">Cotización USD {{figurita.cotizacion}}</h2>
+        </div>
+      </section>
+    </div>
+
+    <section class="details__info-figurita">
+      <div class="details__info-container">
+        <div class="info__primaria">
+          <div class="">
+            <h2>Nivel de impresión</h2>
+            <span class="valor" data-testId="figuritaNivelImpresion">{{figurita.nivelImpresion}}</span>
+          </div>
+          <div class="">
+            <h2>Valoración Base</h2>
+            <span class="valor" data-testId="figuritaValorBase">{{figurita.valorBase()}}</span>
+          </div>
+        </div>
+      </div>
+      <div class="details__info-container">
+        <div class="valoración-total">
+          <h2> Valoración Total</h2>
+          <span class="valor" data-testId="figuritaValoracionTotal">{{figurita.valoracion}}</span>
+        </div>
+      </div>
+
+      <div class="form__buttons_container">
+        <app-btn claseExtra="form__button--secondary" [routerLink]="['/busqueda-figuritas']" texto="Volver"></app-btn>
+        <app-btn claseExtra="form__button--primary" (click)="solicitarFigurita()" texto="Solicitar" *ngIf="figurita && figurita.id !== undefined">Solicitar</app-btn>
+      </div>
+      </section>      
+  </article> 
+  <app-pop-up [resultadoOperacion]="resultadoOperacion" [message]="messageNotificacion"></app-pop-up>
+
+</main>

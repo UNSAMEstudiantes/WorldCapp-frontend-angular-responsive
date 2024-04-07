@@ -1,0 +1,36 @@
+.filter__container {
+    border-radius: 0 0 var(--filter-border) var(--filter-border);
+    background-color: var(--tertiary-color);
+    padding: 0.6rem;
+}
+
+.filter__input {
+    border-radius: var(--input-border);
+    padding: 0.3rem;
+    border: none;
+    outline: none;
+    border-bottom: 0.1rem solid var(--secondary-color);
+    box-shadow: var(--shadows);
+    transition: all 0.2s linear;
+}
+
+.filter__text {
+    display: flex;
+    flex-direction: column;
+    line-height: 2rem;
+}
+  
+.filter__text--title {
+    border-bottom: 0.1rem solid var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+  
+.filter__text--title h3{
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.invalido{
+    border-bottom: 2px solid red;
+}

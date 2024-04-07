@@ -1,0 +1,24 @@
+<header>
+ 
+  <div class="header__icon">
+    <h1 class="header__icon"><a [routerLink]="['/busqueda-figuritas']">WorldCApp</a></h1>
+  </div>
+
+<div
+ (click) = "setActive() "
+ class="header__hamburger" ><i class="fa-solid fa-bars"></i>
+</div>
+
+
+  <div
+ class="header__item__container" 
+ [ngClass]="{ 'header__item__container--activo' : active }">
+    <ul>
+      <li class="header__item header__menu"><a [routerLink]="['/busqueda-figuritas']">Figuritas</a></li>
+      <li class="header__item header__menu"><a [routerLink]="['/perfil']">Perfil</a></li>
+      <li class="header__item header__menu"><a [routerLink]="['/busqueda-sobres']">Sobres</a></li>
+      <li class="header__item header__menu"><a [routerLink]="['']">
+          <i class="fa-solid fa-right-from-bracket"></i></a></li>
+        </ul>
+      </div>
+     </header>

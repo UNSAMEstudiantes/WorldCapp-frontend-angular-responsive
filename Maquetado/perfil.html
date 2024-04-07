@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="stylesheet" href="./styles/perfil.css">
+  <link rel="stylesheet" href="./styles/layout.css">
+  <title>Perfil</title>
+</head>
+
+<body>
+  <div class="layout__container">
+    <header>
+      <div class="header__icon">
+        <h1 class="header__icon">WorldCApp</h1>
+      </div>
+      <div class="header__item__container">
+        <ul>
+          <li class="header__item header__menu">Figuritas</li>
+          <li class="header__item header__menu">Perfil</li>
+          <li class="header__item header__menu">Sobres</li>
+          <li class="header__item header__menu">
+            <i class="fa-solid fa-right-from-bracket"></i>
+          </li>
+          <li class="header__item header__hamburger">
+            <i class="fa-solid fa-bars"></i>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <aside class="perfil__aside__container">
+      <div class="info__user__container">
+        <div class="img__container"><img class="perfil__img"
+            src="https://i.pinimg.com/736x/3b/92/1c/3b921c51dc99d9fb2be192af3ec14f72.jpg" alt="imagen de perfil"></div>
+        <div class="info__container">
+          <div class="info__container--username">
+            <p class="info--user info--username">Carlitos123</p><i class="fa-solid info__icon--username fa-pen"></i>
+          </div>
+          <p class="info--user"><span class="info__span--datos">Edad:</span> 84 años</p>
+          <p class="info--user"><span class="info__span--datos">Ubicacion:</span> CABA</p>
+        </div>
+      </div>
+    </aside>
+    <main>
+      <nav class="nav__movil">
+        <ul class="nav__movil__container">
+          <li class="nav__icon nav__icon--marked ">Informacion del Perfil</li>
+        </ul>
+      </nav>
+      <nav class="nav__container">
+        <ul class="nav__icon__container">
+          <li class="nav__icon nav__icon--marked ">Informacion del Perfil</li>
+          <li class="nav__icon">Figuritas Repetidas</li>
+          <li class="nav__icon">Figuritas Faltantes</li>
+        </ul>
+      </nav>
+      <form class="perfil__form__container">
+        <section class="perfil__form--group">
+          <h2 class="perfil__form--subtitulo">Informacion general</h2>
+          <div class="form__input-group input-group">
+            <label for="name">Nombre</label>
+            <input placeholder="placeholder" type="text" class="form__input" id="name">
+          </div>
+          <div class="form__input-group input-group">
+            <label for="mail">Correo electronico</label>
+            <input placeholder="placeholder" type="email" class="form__input" id="mail">
+          </div>
+          <div class="form__input-group input-group">
+            <label for="apeliido">Apellido</label>
+            <input placeholder="placeholder" type="text" class="form__input" id="apeliido">
+          </div>
+          <div class="form__input-group input-group">
+            <label for="nacimiento">Fecha de nacimiento</label>
+            <input placeholder="placeholder" type="date" class="form__input" id="nacimiento">
+          </div>
+        </section>
+        <section class="perfil__form--group ">
+          <h2 class="perfil__form--subtitulo">Direccion</h2>
+          <div class="form__input-group input-group ">
+            <label for="prov">Provincia</label>
+            <select class="form__input" id="prov">
+              <option value="placeholder">elija una opccion</option>
+              <option value="opcion1">Opción 1</option>
+            </select>
+          </div>
+          <div class="form__input-group input-group ">
+            <label for="loc">Localidad</label>
+            <select class="form__input" id="loc">
+              <option value="placeholder">elija una opccion</option>
+              <option value="opcion1">Opción 1</option>
+            </select>
+          </div>
+          <div class="form__input-group input-group">
+            <label for="calle">Calle</label>
+            <input placeholder="placeholder" type="text" id="calle" class="form__input">
+          </div>
+          <div class="form__input-group input-group">
+            <label for="altura">Altura</label>
+            <input placeholder="placeholder" type="text" id="altura" class="form__input">
+          </div>
+        </section>
+        <section class="perfil__form--group">
+          <h2 class="perfil__form--subtitulo">Ubicacion geografica</h2>
+          <div class="form__input-group input-group">
+            <label for="posx">Posicion X</label>
+            <input placeholder="placeholder" type="text" id="posx" class="form__input">
+          </div>
+          <div class="form__input-group input-group">
+            <label for="posy">Posicion Y</label>
+            <input placeholder="placeholder" type="text" id="posy" class="form__input">
+          </div>
+          <div class="form__input-group input-group">
+            <label for="maxdist">Distancia maxima de cercania</label>
+            <input placeholder="placeholder" type="text" id="maxdist" class="form__input">
+          </div>
+        </section>
+        <section class="perfil__form--group">
+          <h2 class="perfil__form--subtitulo">Criterio para el cambio</h2>
+          <div class="form__input-group input-group">
+            <label for="crit">Criterio------</label>
+            <select class="form__input" id="crit">
+              <option value="placeholder">elija una opccion</option>
+              <option value="opcion1">Opción 1</option>
+            </select>
+          </div>
+        </section>
+        <section class="form__buttons__container">
+          <button class="form__button form__button--secondary">Resetear</button>
+          <button class="form__button form__button--primary">Guardar</button>
+        </section>
+      </form>
+      <nav class="nav__movil">
+        <ul class="nav__movil__container">
+          <li class="nav__icon nav__icon--marked">Figuritas Repetidas</li>
+          <li class="nav__icon nav__icon--marked">Figuritas Faltantes</li>
+        </ul>
+      </nav>
+    </main>
+    <footer>
+      <p><i class="fa-brands fa-square-facebook"></i> <span>WorldCApp</span>/2023</p>
+    </footer>
+  </div>
+  <script src="https://kit.fontawesome.com/6bbbf06a2f.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

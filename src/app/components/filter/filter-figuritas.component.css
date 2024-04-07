@@ -1,0 +1,128 @@
+.filter__container {
+  border-radius: 0 0 var(--filter-border) var(--filter-border);
+  background-color: var(--tertiary-color);
+  padding: 0.6rem;
+}
+
+.filter__container hr {
+    width: 100%;
+    background-color: white;
+    color: white;
+    height: 0.1rem;
+    border: none;
+}
+  
+.filter__container {
+    width: 100%;
+    padding: 1rem 0.5rem;
+}
+  
+.filter__titulo {
+    font-size: 2em;
+    text-align: center;
+}
+  
+.filter__subtitulo {
+    font-size: 1.8em;
+    text-align: center;
+    margin-top: 0.4rem;
+}
+  
+.filter__inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.4rem;
+    margin-bottom: 1.5rem;
+}
+
+@media screen and (max-width: 400px) {
+  .filter__container {
+    padding: 0 0.5rem;
+  }
+
+  .filter__titulo {
+    font-size: 1.1em;
+    margin-bottom: 0.5rem;
+  }
+
+  .filter__subtitulo {
+    font-size: 0.9em;
+    margin-top: 0.8rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .filter__input-group label,
+  .filter__input-group input,
+  .filter__checkbox__container label {
+    font-size: 0.8em;
+  }
+
+  .filter__checkbox__container {
+    display: flex;
+    flex-direction: column;
+    align-self: start;
+    padding-bottom: 1rem;
+  }
+
+  .filter__input {
+    max-width: 45vw;
+  }
+}
+
+@media screen and (min-width: 401px) and (max-width: 768px) {
+  .filter__titulo {
+    font-size: 1.4em;
+    margin-bottom: 0.3rem;
+  }
+
+  .filter__subtitulo {
+    font-size: 1.2em;
+    margin-top: 0.5rem;
+  }
+
+  .filter__inputs {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    margin-bottom: 0;
+  }
+
+  .filter__input-group input {
+    max-width: 100%;
+  }
+
+  .filter {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+    margin-top: 0.8rem;
+  }
+
+  .filter__input__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .filter__input-group {
+    max-width: 100px;
+  }
+
+  .filter__checkbox__container {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .filter__container {
+    border-radius: var(--filter-border);
+  }
+
+  .filter__input {
+    width: 100%;
+  }
+}

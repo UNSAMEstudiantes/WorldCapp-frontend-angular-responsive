@@ -1,0 +1,36 @@
+<div class="content__layout">
+  <aside class="perfil__aside__container">
+    <div class="info__user__container">
+      <div class="img__container"><img class="perfil__img"
+          src="../assets/{{usuario.fotoPerfil}}" alt="imagen de perfil"></div>
+      <div class="info__container">
+        <div class="info__container--username">
+          <p class="info--user info--username">{{usuario.userName}}</p><i class="fa-solid info__icon--username fa-pen"></i>
+        </div>
+        <p class="info--user"><span class="info__span--datos">Edad:</span> {{usuario.edad}}</p>
+        <p class="info--user"><span class="info__span--datos">Ubicacion:</span> {{usuario.direccion.localidad}}</p>
+      </div>
+    </div>
+  </aside>
+  <main>
+    <nav class="nav__movil">
+      <ul class="nav__movil__container">
+        <li data-testId="nav_mov_perf" class="nav__icon" [routerLink]="['/perfil']" [routerLinkActive]="['nav__icon--marked']" [routerLinkActiveOptions]="{ exact: true }" >Informacion del Perfil</li>
+        <li data-testId="nav_mov_rep" class="nav__icon" [routerLink]="['/perfil/figuritas/repetidas']" [routerLinkActive]="['nav__icon--marked']" >Figuritas Repetidas</li>
+        <li data-testId="nav_mov_falt" class="nav__icon" [routerLink]="['/perfil/figuritas/faltantes']" [routerLinkActive]="['nav__icon--marked']" >Figuritas Faltantes</li>
+      </ul>
+    </nav>
+    <nav class="nav__container">
+      <ul class="nav__icon__container">
+        <li data-testId="nav_perf" class="nav__icon" [routerLink]="['/perfil']" [routerLinkActive]="['nav__icon--marked']"  [routerLinkActiveOptions]="{ exact: true }">Informacion Perfil
+        </li>
+        <li data-testId="nav_rep" class="nav__icon"  [routerLink]="['/perfil/figuritas/repetidas']" [routerLinkActive]="['nav__icon--marked']">
+          Figuritas Repetidas</li>
+        <li data-testId="nav_falt" class="nav__icon" [routerLink]="['/perfil/figuritas/faltantes']" [routerLinkActive]="['nav__icon--marked']" >Figuritas Faltantes
+          </li>
+      </ul>
+    </nav>
+    <router-outlet></router-outlet>
+  </main>
+</div>
+<app-Error-PopUp data-testId="error_login" [errorMessage]="errorMessage" [closePopup]="closePopup()" ></app-Error-PopUp>

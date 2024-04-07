@@ -1,0 +1,91 @@
+.figurita {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.figurita__imagen {
+    border-top-left-radius: var(--card-border);
+    border-top-right-radius: var(--card-border);
+    overflow: hidden;
+}
+
+.figurita__imagen img {
+    width: 100%;
+}
+
+.figurita__info-principal {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.figurita__info-secundaria {
+    display: flex;
+    padding: 0.5rem;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.figurita__info-principal .figurita__info__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0.2rem;
+}
+
+.figurita__info-secundaria .figurita__info__container {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.figurita__cotizacion,
+.figurita__cedido {
+    text-align: center;
+    margin-bottom: 0.4rem;
+}
+
+.figurita__cotizacion h2,
+.figurita__cotizacion span {
+    font-size: 0.8rem;
+}
+
+.figurita__cedido h2,
+.figurita__cedido span {
+    font-size: 1rem;
+}
+
+
+.figurita__info-principal .figurita__info__container div,
+.figurita__info-secundaria .figurita__info__container div {
+    display: flex;
+    gap: 0.2rem;
+}
+
+.figurita__info-principal h2,
+.figurita__info-secundaria h2,
+.figurita__info-principal p,
+.figurita__info-secundaria p,
+.figurita__info-principal span,
+.figurita__info-secundaria span {
+    font-size: 0.6rem;
+}
+
+.on-fire {
+    color: red;
+}
+
+@media screen and (min-width: 769px) {
+
+    .figurita__info-principal h2,
+    .figurita__info-secundaria h2,
+    .figurita__info-principal p,
+    .figurita__info-secundaria p,
+    .figurita__info-principal span,
+    .figurita__info-secundaria span {
+        font-size: 0.6rem;
+    }
+}

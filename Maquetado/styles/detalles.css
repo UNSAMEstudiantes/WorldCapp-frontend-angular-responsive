@@ -1,0 +1,190 @@
+.layout__container {
+  grid-template-rows: 1fr 13fr 1fr;
+  grid-template-columns: auto;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer "
+  ;
+}
+
+main {
+  place-self: center;
+}
+
+.details__container {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: 1px solid var(--secondary-color);
+  border-radius: var(--detaills-border);
+}
+
+/* Estilos para el encabezado de los detalles de la figurita */
+
+.details__title {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--tertiary-color);
+  padding: 1rem;
+  border-top-left-radius: var(--detaills-border);
+  border-top-right-radius: var(--detaills-border);
+}
+
+.title__main {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  gap: 1rem;
+}
+
+/* Estilos para el cuadro central con info personaje */
+
+.details__info-central {
+  display: flex;
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+.info-central__imagen {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.info-central__imagen img {
+  border-radius: var(--detaills-border);
+  margin-top: 0.5rem;
+  max-width: 100%;
+  object-fit: 100%;
+}
+
+.info-central__info-personaje {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1rem;
+  flex-direction: column;
+  flex-grow: 3;
+}
+
+.iconos i .on-fire{
+color: red;
+}
+
+.details__nacimiento,
+.details__cotizacion,
+.valoracion-total {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  text-align: center;
+}
+
+.iconos i,
+.iconos h4,
+.details__cotizacion h2,
+.details__title h1 {
+  font-size: 1.5rem;
+}
+
+.details__info-container .details__cotizacion {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-central__info-personaje .details__info-container,
+.iconos {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 0.2rem;
+}
+
+.info-central__info-personaje,
+.details__info-figurita {
+  gap: 1.5rem;
+}
+
+.details__info-container div {
+  display: flex;
+  gap: 0.2rem;
+}
+
+/* Estilos para el cuadro inferior con info figuritas y botones */
+
+.details__info-figurita {
+  display: flex;
+  margin: 1rem;
+  flex-direction: column;
+}
+
+.info__primaria {
+  justify-content: space-between;
+}
+
+.form__buttons_container {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1rem;
+}
+
+
+@media screen and (max-width: 400px) {
+
+  .details__info-central {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .details__title {
+    border-radius: 0%;
+    height: 10rem;
+    gap: 1rem;
+
+  }
+
+  .title__main,
+  .details__title {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .iconos i,
+  .title__main h1,
+  .iconos h4 {
+    font-size: 2.5rem;
+  }
+
+  .info-central__info-personaje .details__info-container,
+  .details__info-figurita .info__primaria,
+  .details__nacimiento,
+  .details__info-figurita {
+    flex-direction: column;
+    gap: 1.3rem;
+    text-align: start;
+  }
+
+  .info-central__info-personaje {
+    padding-top: 1.5rem;
+  }
+
+  .valoracion-total,
+  .details__nacimiento {
+    justify-content: flex-start;
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 401px) and (max-width: 768px) {
+
+  .details__cotizacion {
+    font-size: 1rem;
+  }
+
+  .details__imagen img {
+    height: fit-content;
+  }
+}

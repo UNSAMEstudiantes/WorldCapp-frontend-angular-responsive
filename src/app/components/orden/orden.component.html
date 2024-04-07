@@ -1,0 +1,11 @@
+<div class="filter__container">
+  <div class="filter__text--title">
+    <h3>Ordenar Por</h3>
+  </div>
+  <div class="filter__text">
+    <label><input type="radio" data-testid="menordistancia" class="checkbox__circle" name="aaa" [(ngModel)] = "filtro" (change)="onRadioChange($event)" value ="MENORDISTANCIA">Menor Distancia</label>
+    <label><input type="radio" data-testid="masbaratos" class="checkbox__circle" name="aaa" [(ngModel)] = "filtro" (change)="onRadioChange($event)" value ="MASBARATOS">Mas Barato</label>
+    <label><input type="radio" data-testid="massobres" class="checkbox__circle" name="aaa" [(ngModel)] = "filtro" (change)="onRadioChange($event)" value ="MASSOBRES">Mas Sobres</label>
+    <label><input type="radio" data-testid="mascercanos" class="checkbox__circle" name="aaa" [(ngModel)] = "filtro" (change)="onRadioChange($event)" value ="MASCERCANOS" >Solo los mas cercanos</label>
+  </div>
+</div>

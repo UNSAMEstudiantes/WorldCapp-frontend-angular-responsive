@@ -1,0 +1,16 @@
+<div class="card__layout">
+    <ng-container *ngIf="cards && cards.length > 0; else emptyList">
+      <div *ngFor="let card of cards" [ngSwitch]="cardType">
+        <app-figurita *ngSwitchCase="'Figurita'" (click)="onClickFigurita(card)" (eliminarFiguritaEvent)="eliminarFigurita($event)" [mostrarBoton]="mostrarBoton" [isMain]="isMain" [figurita]="card"></app-figurita>
+        <app-puntodeventa *ngSwitchCase="'PuntoDeVenta'" [puntodeventa]="card"></app-puntodeventa>
+      </div>
+      <app-btn data-testId="tbn_goto" *ngIf="mostrarBoton" (click)="onCLickButton()" claseExtra="button--round" texto="+"></app-btn>
+    </ng-container>
+    <ng-template #emptyList>
+      <div class="empty-list" data-testId="sinCoincidencias">
+        <img src="assets/pepe.png" alt="Lista vacía">
+        <p>No hay coincidencias</p>
+      </div>
+    </ng-template>
+  </div>
+  

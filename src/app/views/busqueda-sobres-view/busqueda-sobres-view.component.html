@@ -1,0 +1,13 @@
+<div class="content__layout">
+    <nav>
+        <app-nav (stringToSearch)="actualizarNombreABuscar($event)" ></app-nav>
+    </nav>
+    <aside>
+        <app-orden (radioValueChanged)="actualizarTipoOrden($event)"></app-orden>
+    </aside>
+    <main>
+      <app-cards-container [cards]="listaDePuntosDeVenta" [cardType]="tipo"></app-cards-container>    
+    </main>
+</div>
+
+<app-Error-PopUp [errorMessage]="errorMessage" [closePopup]="closePopup()" ></app-Error-PopUp>

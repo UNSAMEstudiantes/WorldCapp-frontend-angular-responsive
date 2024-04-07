@@ -1,0 +1,11 @@
+.General__layout__container{
+    display: grid;
+    grid-template-columns: 10,1;
+    grid-template-areas: 
+    'header'
+    'main';
+}
+router-outlet{
+    grid-area: main;
+}
+app-header{grid-area: header;}

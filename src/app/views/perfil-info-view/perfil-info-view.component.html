@@ -1,0 +1,113 @@
+<form data-testId="usuario_form" class="perfil__form__container" [formGroup]="usuarioForm" (ngSubmit)="onSubmit()" data-testId="form__usuario">
+  <section class="perfil__form--group">
+    <h2 class="perfil__form--subtitulo">Informacion general</h2>
+    <div class="form__input-group input-group">
+      <label for="name">Nombre</label>
+      <input data-testId="nombre" placeholder="placeholder" type="text" class="form__input" id="name" formControlName="nombre">
+      <app-ERROR data-testId="nombre_error" *ngIf="usuarioForm.get('nombre')?.dirty && usuarioForm.get('nombre')?.hasError('required')" errorText="El Nombre es obligatorio.
+      "></app-ERROR>
+    </div>
+    <div class="form__input-group input-group">
+      <label for="mail">correo electronico</label>
+      <input data-testId="mail" placeholder="placeholder" type="email" class="form__input" id="mail" formControlName="mail">
+      <app-ERROR data-testId="mail_error" *ngIf="usuarioForm.get('mail')?.dirty && usuarioForm.get('mail')?.hasError('required')" errorText="Ingrese un correo valido
+      "></app-ERROR>
+    </div>
+    <div class="form__input-group input-group">
+      <label for="apeliido">Apellido</label>
+      <input data-testId="apellido" placeholder="placeholder" type="text" class="form__input" id="apeliido" formControlName="apellido">
+      <app-ERROR data-testId="apellido_error" *ngIf="usuarioForm.get('apellido')?.dirty &&usuarioForm.get('apellido')?.hasError('required')"
+        errorText="El apellido es obligatorio.
+      "></app-ERROR>
+    </div>
+    <div class="form__input-group input-group">
+      <label for="nacimiento">Fecha de nacimiento</label>
+      <input data-testId="nacimiento" placeholder="placeholder" type="date" class="form__input" id="nacimiento"
+        formControlName="fechaDeNacimiento">
+      <app-ERROR data-testId="macimiento_error"
+        *ngIf="usuarioForm.get('fechaDeNacimiento')?.touched &&usuarioForm.get('fechaDeNacimiento')?.hasError('required')"
+        errorText="la fecha de nacimiento es obligatoria.
+      "></app-ERROR>
+    </div>
+  </section>
+  <section class="perfil__form--group " formGroupName ="direccion">
+    <h2 class="perfil__form--subtitulo">Direccion</h2>
+    <div class="form__input-group input-group">
+      <label for="prov">Provincia</label>
+      <select data-testId="prov" class="form__input" id="prov" formControlName="provincia">
+        <option value="" disabled selected>Seleccione una provincia</option>
+        <option *ngFor="let provincia of provincias" [value]="provincia">{{ provincia }}</option>
+      </select>
+      <app-ERROR data-testId="prov_error" *ngIf="usuarioForm.get('direccion')?.get('provincia')?.touched && usuarioForm.get('direccion')?.get('provincia')?.hasError('required')"
+        errorText="la provincia es obligatoria."></app-ERROR>
+    </div>
+    <div class="form__input-group input-group ">
+      <label for="loc">Localidad</label>
+      <select data-testId="loc" class="form__input" id="loc" formControlName="localidad">
+        <option value="" disabled selected>Selecciona una localidad</option>
+        <option *ngFor="let localidad of localidades" [value]="localidad">{{ localidad }}</option>
+      </select>
+      <app-ERROR data-testId="loc_error" *ngIf="usuarioForm.get('direccion.localidad')?.touched &&usuarioForm.get('direccion.localidad')?.hasError('required')"
+        errorText="la localidad es obligatoria.
+      "></app-ERROR>
+    </div>
+    <div class="form__input-group input-group">
+      <label for="calle">Calle</label>
+      <input data-testId="calle" placeholder="placeholder" type="text" id="calle" class="form__input" formControlName="calle">
+      <app-ERROR data-testId="calle_error" *ngIf="usuarioForm.get('direccion.calle')?.touched &&usuarioForm.get('direccion.calle')?.hasError('required')" errorText="la calle es obligatoria.
+      "></app-ERROR>
+    </div>
+    <div class="form__input-group input-group">
+      <label for="altura">Altura</label>
+      <input data-testId="altura" placeholder="placeholder" type="number" id="altura" class="form__input" formControlName="altura">
+      <app-ERROR data-testId="altura_error" *ngIf="usuarioForm.get('direccion.altura')?.dirty &&usuarioForm.get('direccion.altura')?.hasError('required')" errorText="la altura es obligatoria.
+      "></app-ERROR>
+    </div>
+  </section>
+  <section class="perfil__form--group" formGroupName="direccion" >
+    <h2 class="perfil__form--subtitulo">Ubicacion geografica</h2>
+    <div class="form__input-group input-group" formGroupName="ubiGeografica">
+      <label for="x">Posicion X</label>
+      <input data-testId="posx" placeholder="placeholder" type="number" id="x" class="form__input" formControlName="x">
+      <app-ERROR data-testId="posx_error" *ngIf="usuarioForm.get('direccion.ubiGeografica.x')?.dirty &&usuarioForm.get('direccion.ubiGeografica.x')?.hasError('required')" errorText="la posicion es obligatoria.
+      "></app-ERROR>
+    </div>
+    <div class="form__input-group input-group" formGroupName="ubiGeografica">
+      <label for="y">Posicion Y</label>
+      <input data-testId="posy" placeholder="placeholder" type="number" id="y" class="form__input" formControlName="y">
+      <app-ERROR data-testId="posy_error" *ngIf="usuarioForm.get('direccion.ubiGeografica.y')?.dirty &&usuarioForm.get('direccion.ubiGeografica.y')?.hasError('required')" errorText="la posicion es obligatoria.
+      "></app-ERROR>
+    </div>
+  </section>
+  <section class="perfil__form--group"> 
+    <div class="form__input-group input-group">
+      <label for="maxdist">Distancia maxima de cercania</label>
+      <input data-testId="distanciaMaxima" placeholder="placeholder" type="number" id="maxdist" class="form__input"
+        formControlName="distanciaMaxima">
+      <app-ERROR data-testId="distanciaMaxima_error"
+        *ngIf="usuarioForm.get('distanciaMaxima')?.dirty &&usuarioForm.get('distanciaMaxima')?.hasError('required')"
+        errorText="la distancia maxima' es obligatoria.
+      "></app-ERROR>
+    </div>
+  </section>
+  <section class="perfil__form--group">
+    <h2 class="perfil__form--subtitulo">tipo para el cambio</h2>
+    <div class="form__input-group input-group">
+      <label for="crit">criterio------</label>
+      <select  class="form__input" id="crit" formControlName="tipo" data-testId="criterio">
+        <option disabled selected value="">seleccione un criterio</option>
+        <option *ngFor="let tipo of tiposDeUsuario" [value]="tipo" >{{tipo}}</option>
+      </select>
+      <app-ERROR *ngIf="usuarioForm.get('tipo')?.touched &&usuarioForm.get('tipo')?.hasError('required')"
+        errorText="el tipo es obligatorio
+      "></app-ERROR>
+    </div>
+  </section>
+  <section class="form__buttons__container">
+    <app-btn claseExtra="form__button--secondary" tipo="reset" texto="resetear"></app-btn> <app-btn data-testId="submit"
+      claseExtra="form__button--primary" tipo="submit" texto="Guardar"></app-btn>
+  </section>
+<app-Error-PopUp data-testId="error_login" [errorMessage]="errorMessage" [closePopup]="closePopup()" ></app-Error-PopUp>
+</form>
+<app-pop-up [resultadoOperacion]="resultadoOperacion" [message]="messageNotificacion"></app-pop-up>
+

@@ -1,0 +1,27 @@
+<main>
+  <form [formGroup]="loginForm">
+    <div class="form__input__container">
+      <h1 class="form__icon">WorldCApp</h1>
+      <div class="input-group">
+        <label for="usr"><b>Usuario</b></label>
+        <div class="form__input--field">
+          <i class="fa-regular form__icon--field fa-user"></i><input data-testId="inp_usuario" formControlName="usuario" id="usr" type="text" placeholder="Usuario"
+            class="form__input">
+        </div>
+        <app-ERROR data-testId="ERR_usuario" data-testId="ERR_usuario" *ngIf="loginForm.get('usuario')?.dirty &&loginForm.get('usuario')?.hasError('required')"  errorText="Por favor ingrese su usuario.
+      "></app-ERROR>
+      </div>
+      <div class="input-group">
+        <label for="psw"><b>Contraseña</b></label>
+        <div class="form__input--field">
+          <i class="fa-solid form__icon--field fa-key"></i><input data-testId="inp_contraseña" formControlName="contraseña" id="psw" type="password" placeholder="Contraseña"
+            class="form__input">
+        </div>
+        <app-ERROR data-testId="ERR_contraseña" *ngIf="loginForm.get('contraseña')?.dirty &&loginForm.get('contraseña')?.hasError('required')"  errorText="Por favor ingrese su contraseña.
+      "></app-ERROR>
+      </div>
+      <app-btn data-testId="btn_submit" claseExtra="form__button--primary" tipo="submit" texto="ingresar" (click)="onSubmit()"></app-btn>
+    </div>
+  </form>
+  <app-Error-PopUp data-testId="error_login" [errorMessage]="errorMessage" [closePopup]="closePopup()" ></app-Error-PopUp>
+</main>

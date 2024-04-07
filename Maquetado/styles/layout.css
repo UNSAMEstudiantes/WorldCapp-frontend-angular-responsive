@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --primary-color: #000040;
+  --secondary-color: #c0c0c0;
+  --tertiary-color: #ffd700;
+  --background-color: #f1f3f8;
+  --primary-text-color: #ffffff;
+  --secondary-text-color: #000000;
+  --card-background-color: #ffffff;
+  --shadows: -2px 2px 4px 0px rgba(0, 0, 0, 0.75);
+  --card-border: 2rem;
+  --input-border: 0.3rem;
+  --filter-border: 1rem;
+  --detaills-border: 0.8rem;
+  --default-transition: all 0.3s linear;
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+.layout__container {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr 1fr 13fr 1fr;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas:
+    "header header"
+    "nav nav"
+    "aside main"
+    "footer footer";
+}
+
+input,
+select,
+.filter__input {
+  border-radius: var(--input-border);
+  padding: 0.3rem;
+  border: none;
+  outline: none;
+  border-bottom: 0.1rem solid var(--secondary-color);
+  box-shadow: var(--shadows);
+}
+
+input:focus {
+  background-color: #eeeeff;
+}
+
+.layout__container>header {
+  grid-area: header;
+  height: 10vh;
+  background-color: var(--primary-color);
+  color: var(--primary-text-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 0.8rem;
+}
+
+.header__icon {
+  justify-self: start;
+  font-weight: 900;
+  font-size: 2rem;
+  transition: var(--default-transition);
+}
+
+.header__menu {
+  transition: var(--default-transition);
+}
+
+nav {
+  grid-area: nav;
+  color: var(--primary-text-color);
+  padding: 1rem 0.5rem;
+  background-color: var(--tertiary-color);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-bar {
+  width: 50vw;
+  z-index: 1;
+}
+
+.search-icon {
+  border-bottom: 0.1rem solid var(--primary-color);
+  outline: none;
+  overflow: hidden;
+  z-index: 0;
+  background-color: var(--primary-color);
+}
+
+.nav__search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav__search .search-bar {
+  border-radius: 0.3rem 0 0 0.3rem;
+  z-index: 1;
+}
+
+.nav__search .search-icon {
+  padding: 0.3rem;
+  border-radius: 0 0.3rem 0.3rem 0;
+  box-shadow: var(--shadows);
+  outline: none;
+  overflow: hidden;
+}
+
+.nav__search-container {
+  width: 100%;
+}
+
+.layout__container>footer {
+  grid-area: footer;
+  padding: 1rem 0;
+  background-color: var(--primary-color);
+  color: var(--primary-text-color);
+  text-align: center;
+}
+
+footer span {
+  font-weight: 600;
+}
+
+.form__button {
+  padding: 0.6rem 1.2rem;
+  border: 0.1rem solid var(--primary-color);
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: var(--shadows);
+}
+
+.form__button--primary {
+  background-color: var(--primary-color);
+  color: var(--primary-text-color);
+}
+
+.button--secondary {
+  background-color: var(--background-color);
+  color: var(--primary-color);
+}
+
+.form__button--secondary:hover {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+}
+
+.form__button--primary:hover,
+.button--primary:hover {
+  transform: scale(1.05);
+}
+
+.filter__container {
+  border-radius: 0 0 var(--filter-border) var(--filter-border);
+  background-color: var(--tertiary-color);
+  padding: 0.6rem;
+}
+.input-group{
+  display: flex;
+  flex-direction: column;
+}
+
+aside {
+  grid-area: aside;
+  margin: 1rem;
+}
+
+main{
+  grid-area: main;
+}
+
+.header__menu:hover {
+  cursor: pointer;
+  color: var(--secondary-color);
+}
+
+.header__icon:hover, .cards__card--plus:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+}
+
+@media screen and (min-width: 769px) {
+  .header__hamburger {
+    display: none;
+  }
+
+  .filter__container {
+    border-radius: var(--filter-border);
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .layout__container {
+    grid-template-areas:
+      "header header"
+      "nav nav"
+      "aside aside"
+      "main main"
+      "footer footer"
+      ;
+  }
+  .header__menu {
+    display: none;
+  }
+
+  .header__hamburger i {
+    font-size: 1.5rem;
+  }
+
+  aside {
+    margin: 0;
+  }
+
+  .filter__container {
+    min-width: 0;
+  }
+}

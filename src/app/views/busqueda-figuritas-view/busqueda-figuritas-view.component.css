@@ -1,0 +1,15 @@
+main{
+  min-height: 90vh;
+}
+
+@media screen and (min-width: 769px) {
+    aside{
+        margin: 1rem;
+    }
+}
+
+@media screen and (max-width: 769px) {
+  aside {
+    margin: 0;
+  }
+}

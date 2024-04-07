@@ -1,0 +1,27 @@
+div{
+    position: fixed;
+    bottom: 1rem;
+    /* left: 15%; */
+    width: 70vw;
+    margin: auto;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    transition: all 0.3s linear;
+    opacity: 0;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+}
+
+
+.success{
+    background-color: rgb(20, 217, 118);
+    color: white;
+    opacity: 1;
+}
+
+.failure{
+    background-color: red;
+    color: white;
+    opacity: 1;
+}

@@ -1,0 +1,11 @@
+footer {
+    grid-area: footer;
+    padding: 1rem 0;
+    background-color: var(--primary-color);
+    color: var(--primary-text-color);
+    text-align: center;
+}
+
+footer span {
+    font-weight: 600;
+}
